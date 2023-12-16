@@ -10,7 +10,8 @@ PRODUCT_PACKAGE_OVERLAYS += device/alexanderwolz/whaleshark/tangorpro/overlay
 
 $(call inherit-product, device/google_car/common/pre_google_car.mk)
 $(call inherit-product, device/alexanderwolz/whaleshark/tangorpro/device-tangorpro-car.mk)
-$(call inherit-product-if-exists, vendor/google_devices/tangorpro/proprietary/device-vendor.mk)
+# TODO evaluate: already called from device/google/tangorpro/device-tangorpro.mk
+# $(call inherit-product-if-exists, vendor/google_devices/tangorpro/proprietary/device-vendor.mk)
 $(call inherit-product, device/google_car/common/post_google_car.mk)
 
 # Use common definitions
