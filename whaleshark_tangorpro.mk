@@ -1,16 +1,16 @@
 # Copyright (C) 2023 Alexander Wolz, mail@alexanderwolz.de
 # product based on:
+#	- device/google_car/raven_car/aosp-raven-car.mk
 #	- device/google/tangorpro/device-tangorpro.mk
-#	- device/google_car/common/*.mk
 
 DEVICE_IS_64BIT_ONLY := true
 
-# Analog to google cheetah car configuration (device rotation)
+# Analog to google raven car configuration (device rotation)
 PRODUCT_PACKAGE_OVERLAYS += device/alexanderwolz/whaleshark/tangorpro/overlay
 
 $(call inherit-product, device/google_car/common/pre_google_car.mk)
-$(call inherit-product, packages/services/Car/car_product/build/car.mk)
-$(call inherit-product, device/google/tangorpro/device-tangorpro.mk)
+$(call inherit-product, device/alexanderwolz/whaleshark/tangorpro/device-tangorpro-car.mk)
+$(call inherit-product-if-exists, vendor/google_devices/tangorpro/proprietary/device-vendor.mk)
 $(call inherit-product, device/google_car/common/post_google_car.mk)
 
 # Use common definitions
