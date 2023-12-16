@@ -7,18 +7,19 @@
 # "include vendor/auto/embedded/products/$(PHONE_CAR_BOARD_PRODUCT)/BoardConfig.mk"
 # TODO: We need to override the path?
 # We will leave it unassigned so it does not look up the non-existing BoardConfig
+# Alternatively we could put this git repo to the given path in the local manifest 
 # PHONE_CAR_BOARD_PRODUCT := tangorpro_car
 
 $(call inherit-product, packages/services/Car/car_product/build/car.mk)
 
 $(call inherit-product, device/google/tangorpro/device-tangorpro.mk)
 
-TARGET_SCREEN_DENSITY := 320 # from BoardConfig in raven_car, see PHONE_CAR_BOARD_PRODUCT, scaled down by 1.75x
+TARGET_SCREEN_DENSITY := 200
 
-include device/google/gs101/uwb/uwb.mk
+#include device/google/gs101/uwb/uwb.mk
 
 PRODUCT_PRODUCT_PROPERTIES+= \
     ro.adb.secure=0
-	
+
 PRODUCT_PACKAGES += \
     librs_jni
