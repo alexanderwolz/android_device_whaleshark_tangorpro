@@ -5,6 +5,9 @@
 
 DEVICE_IS_64BIT_ONLY := true
 
+# Analog to google cheetah car configuration (device rotation)
+PRODUCT_PACKAGE_OVERLAYS += device/alexanderwolz/whaleshark/tangorpro/overlay
+
 $(call inherit-product, device/google_car/common/pre_google_car.mk)
 $(call inherit-product, packages/services/Car/car_product/build/car.mk)
 $(call inherit-product, device/google/tangorpro/device-tangorpro.mk)

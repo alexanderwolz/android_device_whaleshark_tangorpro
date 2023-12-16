@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <!-- somehow this tablet is upside-down -->
+    <integer name="def_user_rotation">3</integer>
+</resources>
