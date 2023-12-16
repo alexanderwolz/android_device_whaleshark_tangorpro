@@ -19,3 +19,6 @@ include device/google/gs101/uwb/uwb.mk
 
 PRODUCT_PRODUCT_PROPERTIES+= \
     ro.adb.secure=0
+	
+PRODUCT_PACKAGES += \
+    librs_jni
