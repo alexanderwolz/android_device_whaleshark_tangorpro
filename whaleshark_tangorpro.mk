@@ -1,16 +1,9 @@
 # Copyright (C) 2023 Alexander Wolz, mail@alexanderwolz.de
 # product based on:
-#	- device/google_car/raven_car/aosp-raven-car.mk
-#	- device/google/tangorpro/device-tangorpro.mk
+#	- device/google_car/tangorpro_car/aosp_tangorpro_car
 
-DEVICE_IS_64BIT_ONLY := true
-
-# Analog to google raven car configuration (device rotation)
-PRODUCT_PACKAGE_OVERLAYS += device/alexanderwolz/whaleshark/tangorpro/overlay
-
-$(call inherit-product, device/google_car/common/pre_google_car.mk)
-$(call inherit-product, device/alexanderwolz/whaleshark/tangorpro/device-tangorpro-car.mk)
-$(call inherit-product, device/google_car/common/post_google_car.mk)
+# Since Android 14: derive directly from automotive tangorpro definition
+$(call inherit-product, device/google_car/tangorpro_car/aosp_tangorpro_car.mk)
 
 # Use common definitions
 $(call inherit-product, device/alexanderwolz/whaleshark/common/whaleshark_common.mk)

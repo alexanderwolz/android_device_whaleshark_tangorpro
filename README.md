@@ -61,7 +61,7 @@ Currently, there is an issue with vendor partition, so it needs to be adb synced
 6. ```adb synch vendor && adb reboot```
 7. The device should now be fully functional and welcoming you with the Dashboard window.
 
-Otherwise you can use my script collection [here](https://github.com/alexanderwolz/android-build-tools) for an automated sync and device flash
+See also [this article](https://source.android.com/docs/automotive/start/pixelxl) as a reference for Nexus and Pixel devices. Additionally you can use my script collection [here](https://github.com/alexanderwolz/android-build-tools) for an automated sync and device flash.
 
 
 ## 🧑‍💻 Known Issues
