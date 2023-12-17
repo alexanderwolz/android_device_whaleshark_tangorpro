@@ -5,10 +5,10 @@
 
 # This executes the following in device/google/tangorpro/tangorpro/BoardConfig.mk:
 # "include vendor/auto/embedded/products/$(PHONE_CAR_BOARD_PRODUCT)/BoardConfig.mk"
+# For that reason, we symlink the BoardConfig to that folder
 PHONE_CAR_BOARD_PRODUCT := whaleshark_tangorpro
 
 $(call inherit-product, packages/services/Car/car_product/build/car.mk)
-
 $(call inherit-product, device/google/tangorpro/device-tangorpro.mk)
 
 PRODUCT_PRODUCT_PROPERTIES+= \

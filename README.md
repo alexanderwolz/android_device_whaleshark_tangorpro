@@ -33,11 +33,10 @@ See [here](https://github.com/alexanderwolz/android_device_whaleshark_manifest/t
 This follows the normal AOSP build approach, e.g.
 1. ```cd $AOSP_HOME```
 2. ```source build/envsetup.sh```
-3. ```lunch whaleshark-userdebug```
-4. ```make clobber``` (optionally, cleans target folder)
-5. ```m -j$(nproc --all)```
-6. ```m -j$(nproc --all) android.hardware.automotive.vehicle@2.0-default-service```
-7. See compiled files at ```$ANDROID_PRODUCT_OUT``` (should be ```out/target/product/tangorpro```)
+3. ```lunch whaleshark_tangorpro-userdebug```
+4. ```m -j$(nproc --all)```
+5. ```m -j$(nproc --all) android.hardware.automotive.vehicle@2.0-default-service```
+6. See compiled files at ```$ANDROID_PRODUCT_OUT``` (should be ```out/target/product/tangorpro```)
 
 
 ## ✨ Flash the build
