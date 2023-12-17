@@ -17,7 +17,7 @@ See also [aosp-docker](https://github.com/alexanderwolz/aosp-docker) for a Docke
 
 ### Download AOSP repository
 
-See [here](https://github.com/alexanderwolz/android_device_whaleshark_manifest/tree/android-13) for setup of AOSP repository and dependencies.
+See [here](https://github.com/alexanderwolz/android_device_whaleshark_manifest/tree/android-14) for setup of AOSP repository and dependencies.
 
 ### Add binary drivers
 1. Download binaries for *tangorpro* from [here](https://developers.google.com/android/drivers?hl=en) according to branch and build id
