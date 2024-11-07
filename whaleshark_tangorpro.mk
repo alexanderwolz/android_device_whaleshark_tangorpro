@@ -1,4 +1,4 @@
-# Copyright (C) 2023 Alexander Wolz, mail@alexanderwolz.de
+# Copyright (C) 2024 Alexander Wolz, mail@alexanderwolz.de
 # product based on:
 #	- device/google_car/tangorpro_car/aosp_tangorpro_car
 

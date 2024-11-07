@@ -1,4 +1,4 @@
-# Copyright (C) 2023 Alexander Wolz, mail@alexanderwolz.de
+# Copyright (C) 2024 Alexander Wolz, mail@alexanderwolz.de
 
 PRODUCT_MAKEFILES := \
 	whaleshark_tangorpro:$(LOCAL_DIR)/whaleshark_tangorpro.mk 
