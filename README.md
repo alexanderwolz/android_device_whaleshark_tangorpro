@@ -22,7 +22,7 @@ See [here](https://github.com/alexanderwolz/android_device_whaleshark_manifest/t
 ### Add binary drivers
 1. Download binaries for *tangorpro* from [here](https://developers.google.com/android/drivers?hl=en) according to branch and build id
 2. Extract with ```tar -xvf google_devices-tangorpro-*.tgz```
-3. Copy *extract-google_devices-tangorpro.sh* to *$AOSP_HOME*
+3. Copy ```*extract-google_devices-tangorpro.sh*``` to ```*$AOSP_HOME*```
 4. Execute with ```bash extract-google_devices-tangorpro.sh```
 5. Drivers will be extracted to ```vendor/google_devices/tangorpro```
 6. Clean up with ```rm extract-google_devices-tangorpro.sh```
@@ -33,16 +33,17 @@ See [here](https://github.com/alexanderwolz/android_device_whaleshark_manifest/t
 This follows the normal AOSP build approach, e.g.
 1. ```cd $AOSP_HOME```
 2. ```source build/envsetup.sh```
-3. ```lunch whaleshark_tangorpro-userdebug```
-4. ```m -j$(nproc --all)```
-5. ```m -j$(nproc --all) android.hardware.automotive.vehicle@2.0-default-service```
-6. See compiled files at ```$ANDROID_PRODUCT_OUT``` (should be ```out/target/product/tangorpro```)
+3. ```lunch whaleshark_tangorpro-bp1a-userdebug```*
+5. ```m -j$(nproc --all)```
+6. ```m -j$(nproc --all) android.hardware.automotive.vehicle@2.0-default-service```
+
+*Info: With Android 15, release flags have been introduced. See also ```${AOSP_HOME}/build/release/release_configs```
 
 
 ## ✨ Flash the build using $ANDROID_PRODUCT_OUT
 
 1. Copy or rsync the ```$ANDROID_PRODUCT_OUT``` folder to localhost, if built remotely
-2. Check that ```$ANDROID_PRODUCT_OUT``` is set and export otherwise
+2. Check that ```$ANDROID_PRODUCT_OUT``` is set (e.g. ```export ANDROID_PRODUCT_OUT=$(pwd)```)
 3. ```adb reboot bootloader```
 4. ```fastboot flashing unlock```
 5. ```fastboot flash bootloader $ANDROID_PRODUCT_OUT/bootloader.img``` (could be skipped)
@@ -58,7 +59,7 @@ Currently, there is an issue with vendor partition, so it needs to be adb synced
 3. ```adb remount``` (eventually you need to ```adb shell vdc checkpoint commitChanges```)
 4. ```adb reboot```
 5. ```adb root && adb remount```
-6. ```adb synch vendor && adb reboot```
+6. ```adb sync vendor && adb reboot```
 7. The device should now be fully functional and welcoming you with the Dashboard window.
 
 See also [this article](https://source.android.com/docs/automotive/start/pixelxl) as a reference for Nexus and Pixel devices. Additionally you can use my script collection [here](https://github.com/alexanderwolz/android-build-tools) for an automated sync and device flash.

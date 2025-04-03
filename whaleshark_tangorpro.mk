@@ -1,4 +1,4 @@
-# Copyright (C) 2024 Alexander Wolz, mail@alexanderwolz.de
+# Copyright (C) 2025 Alexander Wolz, mail@alexanderwolz.de
 # product based on:
 #	- device/google_car/tangorpro_car/aosp_tangorpro_car
 
@@ -12,12 +12,15 @@ $(call inherit-product, device/alexanderwolz/whaleshark/common/whaleshark_common
 # vehicle service (VHAL) needs to be built with this product, normally this is done by Automotive OEMs
 # we want to use the default stubbed service here, so we need to manually build it:
 # m -j$(nproc --all) android.hardware.automotive.vehicle@2.0-default-service
-# -> already included in device/google_car/common/pre_google_car.mk
+#
+# -> This is already included in device/google_car/common/pre_google_car.mk
+#PRODUCT_PACKAGES += \
+#    android.hardware.automotive.vehicle@2.0-default-service
 
 # Device identifier. This must come after all inclusions
+PRODUCT_NAME := whaleshark_tangorpro
 PRODUCT_BRAND := alexanderwolz
 PRODUCT_MANUFACTURER := alexanderwolz
-PRODUCT_NAME := whaleshark_tangorpro
 PRODUCT_MODEL := Whale Shark AAOS on Tangorpro
 
 # we reuse the original device configuration from device/google_car/tangorpro
